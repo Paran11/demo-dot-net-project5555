@@ -1,5 +1,5 @@
 # ASP.NET Core
-- task: DotNetCoreCLI@2
+ task: DotNetCoreCLI@2
   inputs:
     command: 'build'
 # Build and test ASP.NET Core projects targeting .NET Core.
@@ -7,7 +7,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+ master
 
 pool:
   vmImage: ubuntu-latest
@@ -16,5 +16,5 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
+ script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
